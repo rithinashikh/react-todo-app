@@ -19,6 +19,7 @@ const addTodos = () => {
     }
     else {
         setTodos([...todos,{list:todo, id:Date.now() ,status:false}]) 
+        setTodo('')
         return; 
     }    
 
@@ -38,6 +39,8 @@ const todoComplete = (id) => {
 const todoDelete = (id) => {
     setTodos(todos.filter( (t)=> t.id !== id ))
 }
+
+
 
   return (
     <div className="container">
